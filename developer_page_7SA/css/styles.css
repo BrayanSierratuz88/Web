@@ -1,3 +1,11 @@
+:root {
+    --blanco:  #ffffff;
+    --Oscuro: #212121;
+    --primario: #ffc107;
+    --Secundario: #0097a7;
+    --gris: #757575;
+    font-family: "krub";
+}
 html{
     font-size: 62.5%;
 }
@@ -11,3 +19,46 @@ body{
 .titulo span{
     font-size: 2rem;
 }
+
+.navegacion-principal{
+    background-color: var(--Secundario);
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.nav-bg{
+    background-color: var(--Secundario);
+}
+
+
+.navegacion-principal a{
+    background-color: var(--Secundario);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1rem;
+}
+
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*Justifica para filas aligns-items para columnas*/
+    /*justify-content: space-between;*/
+    font-size: 2rem;
+    font-weight: bold;
+}
+/* Si al menos tiene 768px (tablet) */
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+ 
+ }
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--Oscuro)
+}
+
